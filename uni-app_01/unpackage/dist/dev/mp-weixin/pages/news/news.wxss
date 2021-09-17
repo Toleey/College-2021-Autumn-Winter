@@ -1,0 +1,10 @@
+
+.box{
+	background-color: green;
+	width: 100px;
+}
+.box_1{
+	background-color: red;
+}
+
+

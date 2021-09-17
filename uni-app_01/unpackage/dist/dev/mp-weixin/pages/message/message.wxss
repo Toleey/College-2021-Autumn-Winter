@@ -1,0 +1,13 @@
+
+.box{
+	height: 100px;
+	width: 100px;
+	background-color: #F0AD4E;
+}
+.box2{
+	height: 200px;
+	width: 200px;
+	background-color: red;
+}
+
+

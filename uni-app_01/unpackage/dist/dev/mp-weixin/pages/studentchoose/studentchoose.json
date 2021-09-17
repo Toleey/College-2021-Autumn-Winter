@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "学生选课系统",
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#00AAFF",
+  "backgroundColor": "#E5E5E5",
+  "usingComponents": {}
+}

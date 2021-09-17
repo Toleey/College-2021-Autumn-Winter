@@ -1,0 +1,44 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "touristappid",
+  "projectname": "uni-app_01",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "name": "新闻页",
+          "query": "a=1",
+          "id": 0,
+          "pathName": "pages/news/news"
+        },
+        {
+          "name": "我的",
+          "query": "",
+          "id": 1,
+          "pathName": "pages/my/my"
+        }
+      ]
+    }
+  }
+}

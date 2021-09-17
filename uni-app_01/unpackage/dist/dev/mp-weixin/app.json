@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/news/news",
+    "pages/schoolhelp/schoolhelp",
+    "pages/studentchoose/studentchoose",
+    "pages/greenhat/greenhat",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/shoppingcar/shoppingcar"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "首页",
+    "navigationBarBackgroundColor": "#00beff",
+    "backgroundColor": "#ff8e00",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#F0AD4E",
+    "selectedColor": "#DD524D",
+    "backgroundColor": "#fbde00",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/icon/home-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "static/tabs/message.png",
+        "selectedIconPath": "static/tabs/message-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tabs/contact.png",
+        "selectedIconPath": "static/tabs/contact-active.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

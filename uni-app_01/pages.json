@@ -1,0 +1,168 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				//"navigationBarTitleText": "uni-app"
+			}
+		}
+		,{
+			"path": "pages/news/news",
+			"style": {
+				//"navigationBarTitleText": "uni-app"
+			}
+		}
+		,{
+			"path" : "pages/schoolhelp/schoolhelp",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+			
+		}
+		,{
+			"path" : "pages/studentchoose/studentchoose",
+			"style" :                               
+																 
+			{
+				"navigationBarTitleText": "学生选课系统",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor":"#00AAFF",
+				"backgroundColor":"#E5E5E5"
+			}
+			
+		}
+		,{
+		    "path" : "pages/greenhat/greenhat",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "绿帽子",
+		        "enablePullDownRefresh": true,
+				"navigationBarBackgroundColor":"#7fff00"
+			
+				
+		    }
+		    
+		}
+		,{
+			"path" : "pages/message/message",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "消息页",
+				"enablePullDownRefresh": true,
+				"backgroundColor":"#4CD964", //下拉的时候能看到背景颜色 直接输入颜色名不可，用十六进制
+				"h5":{  //H5平台特有样式
+					"titleNView":{
+						"titleColor":"#333333"
+					}
+				},
+				"mp-weixin":{ //微信平台特殊样式
+					
+				},
+				"mp-alipay":{ //支付宝小程序样式
+					
+				}
+			}
+			
+		}
+	    ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+
+        ,{
+            "path" : "pages/shoppingcar/shoppingcar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": { //页面整个窗体全局样式 全局的样式
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "首页",
+		"navigationBarBackgroundColor": "#00beff",
+		"backgroundColor": "#ff8e00",
+		"enablePullDownRefresh":true,
+		"backgroundTextStyle":"dark",
+		"onReachBottomDistance":50
+		
+	},
+	"tabBar":{
+		// "list":[
+		// 	{
+		// 		"pagePath":"pages/index/index",
+		// 		"text":"首页",
+		// 		"iconPath":"static/icon/home.png",
+		// 		"selectedIconPath":"static/icon/home-active.png"
+		// 	},
+		// 	{
+		// 		"pagePath":"pages/news/news",
+		// 		"text":"咨询",
+		// 		"iconPath":"static/icon/news.png",
+		// 		"selectedIconPath":"static/icon/news-active.png"
+		// 	},
+		// 	{
+		// 		"pagePath":"pages/shoppingcar/shoppingcar",
+		// 		"text":"购物车",
+		// 		"iconPath":"static/icon/cart.png",
+		// 		"selectedIconPath":"static/icon/cart-active.png"
+		// 	},
+		// 	{
+		// 		"pagePath":"pages/my/my",
+		// 		"text":"会员",
+		// 		"iconPath":"static/icon/member.png",
+		// 		"selectedIconPath":"static/icon/member-active.png"
+		// 	}
+		// ]
+		"color":"#F0AD4E",  ///默认文字颜色
+		"selectedColor":"#DD524D", //选中字体颜色
+		"backgroundColor":"#fbde00", //背景色
+		"borderStyle":"black", //边框颜色
+		"list":[  //对象就是一个大括号,最少2个、最多5个 tab
+			{
+				"pagePath":"pages/index/index",
+				"text":"首页",
+				"iconPath":"static/tabs/home.png",
+				"selectedIconPath":"static/icon/home-active.png"
+			},
+			{
+				"pagePath":"pages/message/message",
+				"text":"消息",
+				"iconPath":"static/tabs/message.png",
+				"selectedIconPath":"static/tabs/message-active.png"
+			},
+			{
+				"pagePath":"pages/my/my",
+				"text":"我的",
+				"iconPath":"static/tabs/contact.png",
+				"selectedIconPath":"static/tabs/contact-active.png"
+			}
+		]
+		
+	},
+	"condition":{ //模拟直接到达这个页面 调试
+		"current":0,
+		"list":[
+			{
+				"name":"新闻页",
+				"path":"pages/news/news",
+				"query":"a=1" //开发时模拟使用的开发参数
+			},
+			{
+				"name":"我的",
+				"path":"pages/my/my",
+				"query":""
+			}
+			
+		]
+	}
+}

@@ -1,0 +1,1 @@
+<view><view><text>信息页</text><text>信息页</text></view><view><text>信息页</text></view><view><text space="emsp">信 息页</text></view><view><text style="font-size:20px;" space="emsp">信 息页</text></view><view><text>我是文本，是不可选的那种</text></view><view><text user-select="true">但我是文本，是可选的那种</text></view><view class="box"><view hover-class="box_1">我是一个大盒子</view></view></view>
