@@ -1,0 +1,1 @@
+<view><view class="onlyH52">仅在H5呈现2</view><view class="onlyWechat">仅在Wechat呈现</view><button type="default" data-event-opts="{{[['tap',[['btnclick']]]]}}" bindtap="__e">H5点击</button></view>

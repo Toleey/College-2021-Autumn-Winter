@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/navigator/navigator",
     "pages/index/index",
     "pages/news/news",
     "pages/schoolhelp/schoolhelp",
@@ -7,7 +8,30 @@
     "pages/greenhat/greenhat",
     "pages/message/message",
     "pages/my/my",
-    "pages/shoppingcar/shoppingcar"
+    "pages/shoppingcar/shoppingcar",
+    "pages/text/text",
+    "pages/flex/flex",
+    "pages/flex-test/flex-test",
+    "pages/flex-test2/flex-test2",
+    "pages/fonticon/fonticon",
+    "pages/flex-test3/flex-test3",
+    "pages/home/home",
+    "pages/homework0924/homework0924",
+    "pages/login/login",
+    "pages/receipt/receipt",
+    "pages/stuinfo/stuinfo",
+    "pages/student/student",
+    "pages/search/search",
+    "pages/request/request",
+    "pages/hwget/hwget",
+    "pages/lunbo/lunbo",
+    "pages/storage/storage",
+    "pages/storage2/storage2",
+    "pages/storage3/storage3",
+    "pages/image/image",
+    "pages/file/file",
+    "pages/springboottest/springboottest",
+    "pages/idel/idel"
   ],
   "subPackages": [],
   "window": {
@@ -23,7 +47,6 @@
     "color": "#F0AD4E",
     "selectedColor": "#DD524D",
     "backgroundColor": "#fbde00",
-    "borderStyle": "black",
     "list": [
       {
         "pagePath": "pages/index/index",

@@ -1,0 +1,1 @@
+<view><button type="default" data-event-opts="{{[['tap',[['getUserInfo']]]]}}" bindtap="__e">获取所有用户信息</button><button type="default" data-event-opts="{{[['tap',[['getUserInfoPassword']]]]}}" bindtap="__e">获取指定用户名的密码</button><button type="default" data-event-opts="{{[['tap',[['login']]]]}}" bindtap="__e">登陆，用户名和密码</button></view>

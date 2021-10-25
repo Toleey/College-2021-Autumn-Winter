@@ -1,0 +1,1 @@
+<view><progress stroke-width="100" percent="{{percent}}"></progress><button type="default" data-event-opts="{{[['tap',[['uploadFile',['$event']]]]]}}" bindtap="__e">文件上传</button></view>

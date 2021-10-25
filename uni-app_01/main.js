@@ -1,5 +1,9 @@
 import App from './App'
 
+//挂在成全局的方法
+import {myRequest} from './util/api.js'
+Vue.prototype.$myRequest=myRequest
+
 // #ifndef VUE3
 import Vue from 'vue'
 Vue.config.productionTip = false

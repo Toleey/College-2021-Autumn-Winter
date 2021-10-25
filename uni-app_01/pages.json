@@ -1,6 +1,15 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path" : "pages/navigator/navigator",
+			"style" :                                                                                    
+			{
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+			
+		},
+		{
 			"path": "pages/index/index",
 			"style": {
 				//"navigationBarTitleText": "uni-app"
@@ -66,7 +75,8 @@
 			}
 			
 		}
-	    ,{
+	    ,//#ifndef MP-TOUTIAO
+		{
             "path" : "pages/my/my",
             "style" :                                                                                    
             {
@@ -75,9 +85,261 @@
             }
             
         }
-
-        ,{
+        ,
+		//#endif
+		{
             "path" : "pages/shoppingcar/shoppingcar",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/text/text",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/flex/flex",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/flex-test/flex-test",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/flex-test2/flex-test2",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/fonticon/fonticon",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/flex-test3/flex-test3",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/homework0924/homework0924",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/receipt/receipt",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/stuinfo/stuinfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/student/student",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+	
+					"app-plus":{
+						"scrollIndicator":"none",//去除滚动条
+						"titleNView":{//导航栏
+							"backgroundColor":"#1375FF",//导航栏的背景色
+							"searchInput":{//中间的搜索框
+								"align":"left",//placeholder对齐方式
+								"borderRadius":"30px",
+								"placeholder":"请输入关键词搜素",
+								"placeholderColor":"#BEBFC2",
+								"backgroundColor":"#fff",
+								"disabled":true//布尔值，是否输入
+							},
+				//重点说明:在iconfont中下载你所需要的图标，解压后把iconfont.ttf字体文件拷贝在static目录下，fontSrc需要引入。
+						"buttons":[//配置两边的按钮
+							{
+								"color":"#fff",
+								"float":"left",
+								"fontSize":"22px",
+								"fontSrc":"/static/fonts/iconfont2.ttf",
+								"text":"\ue657"//按钮上显示的文字。使用字体图标时 unicode 字符表示必须 '\u' 开头，如 "\ue123"（注意不能写成"\e123"）。
+							},
+							{
+								"color":"#fff",
+								"float":"right",
+								"fontSize":"22px",
+								"fontSrc":"/static/fonts/iconfont2.ttf",
+								"text":"\ue6d8"
+							}
+						]
+					}
+				}
+				
+            }
+			
+        }
+        ,{
+            "path" : "pages/request/request",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/hwget/hwget",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,
+		{
+            "path" : "pages/lunbo/lunbo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,
+		{
+            "path" : "pages/storage/storage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/storage2/storage2",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/storage3/storage3",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/image/image",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/file/file",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/springboottest/springboottest",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/idel/idel",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/componentuse/componentuse",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
@@ -126,7 +388,7 @@
 		"color":"#F0AD4E",  ///默认文字颜色
 		"selectedColor":"#DD524D", //选中字体颜色
 		"backgroundColor":"#fbde00", //背景色
-		"borderStyle":"black", //边框颜色
+		//"borderStyle":"black", //边框颜色
 		"list":[  //对象就是一个大括号,最少2个、最多5个 tab
 			{
 				"pagePath":"pages/index/index",
@@ -161,6 +423,14 @@
 				"name":"我的",
 				"path":"pages/my/my",
 				"query":""
+			},
+			{
+				"name":"绿帽子",
+				"path":"pages/greenhat/greenhat"
+			},
+			{
+				"name":"text",
+				"path":"pages/text/text"
 			}
 			
 		]

@@ -1,44 +1,90 @@
 {
-  "description": "项目配置文件。",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false
-  },
-  "compileType": "miniprogram",
-  "libVersion": "",
-  "appid": "touristappid",
-  "projectname": "uni-app_01",
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
+    "description": "项目配置文件。",
+    "packOptions": {
+        "ignore": []
     },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "current": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "current": 0,
-      "list": [
-        {
-          "name": "新闻页",
-          "query": "a=1",
-          "id": 0,
-          "pathName": "pages/news/news"
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "enhance": true,
+        "postcss": true,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "newFeature": false,
+        "coverView": true,
+        "nodeModules": false,
+        "autoAudits": false,
+        "showShadowRootInWxmlPanel": true,
+        "scopeDataCheck": false,
+        "uglifyFileName": false,
+        "checkInvalidKey": true,
+        "checkSiteMap": true,
+        "uploadWithSourceMap": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "useMultiFrameRuntime": false,
+        "useApiHook": false,
+        "useApiHostProcess": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
         },
-        {
-          "name": "我的",
-          "query": "",
-          "id": 1,
-          "pathName": "pages/my/my"
+        "enableEngineNative": false,
+        "useIsolateContext": true,
+        "userConfirmedBundleSwitch": false,
+        "packNpmManually": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "showES6CompileOption": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "",
+    "appid": "touristappid",
+    "projectname": "uni-app_01",
+    "simulatorType": "wechat",
+    "simulatorPluginLibVersion": {},
+    "condition": {
+        "search": {
+            "list": []
+        },
+        "conversation": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "新闻页",
+                    "query": "a=1",
+                    "id": 0,
+                    "pathName": "pages/news/news"
+                },
+                {
+                    "name": "我的",
+                    "query": "",
+                    "id": 1,
+                    "pathName": "pages/my/my"
+                },
+                {
+                    "name": "绿帽子",
+                    "id": 2,
+                    "pathName": "pages/greenhat/greenhat"
+                },
+                {
+                    "name": "text",
+                    "id": 3,
+                    "pathName": "pages/text/text"
+                },
+                {
+                    "id": 4,
+                    "name": "pages/idel/idel",
+                    "pathName": "pages/idel/idel",
+                    "query": ""
+                }
+            ]
         }
-      ]
     }
-  }
 }

@@ -1,0 +1,1 @@
+<view><button data-event-opts="{{[['tap',[['getDailyVideo',['$event']]]]]}}" bindtap="__e">发起get请求，获取每日视频列表</button><block wx:for="{{videoList}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view><view>{{item.data.content}}</view></view></block></view>

@@ -1,0 +1,1 @@
+<view><view>是否开具发票</view><block wx:for="{{arr}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view>{{''+item.name+"---"+item.age+"---"+item.gender+''}}<switch checked="{{true}}" data-event-opts="{{[['change',[['switchchange',['$0'],[[['arr','',i]]]]]]]}}" bindchange="__e"></switch></view></block></view>

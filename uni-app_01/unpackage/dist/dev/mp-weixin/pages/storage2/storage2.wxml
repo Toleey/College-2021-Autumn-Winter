@@ -1,0 +1,1 @@
+<view><button type="default" data-event-opts="{{[['tap',[['setStorage']]]]}}" bindtap="__e">存储数据</button><button type="default" data-event-opts="{{[['tap',[['toS3']]]]}}" bindtap="__e">去B页面</button></view>

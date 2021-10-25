@@ -4,6 +4,11 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<uni-icons type="arrowdown"></uni-icons>
+		
+		<navigator url="../flex/flex?id=1"><!-- html中的a标签 -->
+			<button>传递参数</button>
+		</navigator>
 	</view>
 </template>
 
@@ -14,8 +19,20 @@
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		// onInit() { //页面初始化，早于onLoad，一般不使用，用onload
+		// 	console.log("页面初始化") 仅百度小程序基础库 3.260 以上支持 onInit 生命周期
+		// },
+		onLoad(opt) { //opt 上个页面传递过来的数据
+			console.log("页面加载了"+opt)
+		},
+		onReady() {
+			console.log("页面渲染了")
+		},
+		onShow() {
+			console.log("页面显示了")
+		},
+		onHide() {
+			console.log("页面隐藏了")
 		},
 		methods: {
 

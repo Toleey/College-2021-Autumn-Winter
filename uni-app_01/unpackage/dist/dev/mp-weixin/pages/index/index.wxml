@@ -1,1 +1,1 @@
-<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view></view>
+<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view><uni-icons vue-id="8dd740cc-1" type="arrowdown" bind:__l="__l"></uni-icons><navigator url="../flex/flex?id=1"><button>传递参数</button></navigator></view>

@@ -1,1 +1,1 @@
-<view></view>
+<view><button size="default">保存</button><button size="mini">保存</button><button class="bt1" type="default">按钮</button><button class="bt2" type="default">按钮</button><button class="bt3" type="default" disabled="{{true}}">按钮</button><button class="bt4" type="default" loading="{{true}}"></button></view>

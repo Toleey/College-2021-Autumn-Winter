@@ -1,0 +1,1 @@
+<view><view>A页面</view><block wx:for="{{list}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view>{{''+item.id+"---"+item.name+"---"+item.age+"---"+item.gender+''}}<navigator url="{{'/pages/student/student?id='+item.id}}"><text>详情</text></navigator></view></block></view>

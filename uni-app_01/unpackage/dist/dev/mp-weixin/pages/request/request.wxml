@@ -1,0 +1,1 @@
+<view><button data-event-opts="{{[['tap',[['getLunbo',['$event']]]]]}}" bindtap="__e">发起get请求</button><button data-event-opts="{{[['tap',[['getLunbo2',['$event']]]]]}}" bindtap="__e">发起get请求2</button><block wx:for="{{imageList}}" wx:for-item="item" wx:for-index="i" wx:key="i"><view><image src="{{item.img}}"></image>1</view></block></view>

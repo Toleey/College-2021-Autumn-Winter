@@ -1,6 +1,18 @@
 
 page{
-	background-color: #333333;
+	background-color: white;
 }
+.bt1{
+	background-color: #0072FC;
+	color: white;
+}
+.bt2{
+	color: #85B8EC;
+}
+.bt3{
+	background-color: #55A9FE;
+	color: #8DC8FD;
+}
+
 
 

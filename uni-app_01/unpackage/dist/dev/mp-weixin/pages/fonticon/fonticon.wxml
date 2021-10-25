@@ -1,0 +1,1 @@
+<view><view class="iconfont icon-tupian"></view><text class="iconfont icon-tupian"></text><text class="iconfont icon-tupian"></text><uni-icons vue-id="774a2a40-1" type="weixin" size="30" bind:__l="__l"></uni-icons><uni-icons class="mr-30" vue-id="774a2a40-2" type="icon-shipin" fontFamily="iconfone" color="#007aff" size="20" bind:__l="__l"></uni-icons></view>

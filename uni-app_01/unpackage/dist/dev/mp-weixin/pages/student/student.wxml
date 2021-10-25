@@ -1,0 +1,1 @@
+<view><view>B页面</view>{{'姓名：'+studentinfo.name+"\n\t性别："+studentinfo.gender+"\n\t年龄："+studentinfo.age+''}}</view>
