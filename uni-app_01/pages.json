@@ -347,6 +347,24 @@
             }
             
         }
+        ,{
+            "path" : "pages/dad/dad",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/schedule/schedule",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": { //页面整个窗体全局样式 全局的样式
 		"navigationBarTextStyle": "white",
