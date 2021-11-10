@@ -13,6 +13,7 @@
 			"path": "pages/index/index",
 			"style": {
 				//"navigationBarTitleText": "uni-app"
+				"enablePullDownRefresh": true
 			}
 		}
 		,{
@@ -365,13 +366,125 @@
             }
             
         }
+        ,{
+            "path" : "pages/uni-ui/uni-ui",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/daohang/daohang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/zhediemianban/zhediemianban",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		
+        ,{
+            "path" : "pages/list/list",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": true,
+				"onReachBottomDistance":100
+            }
+            
+        }
+        
+       
+        ,{
+            "path" : "pages/newslist/newslist",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/itemList/itemList",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index2/index2",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login6/login6",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/logout6/logout6",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/main6/main6",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/myself/myself",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/loginbymaostate/loginbymaostate",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": { //页面整个窗体全局样式 全局的样式
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "首页",
 		"navigationBarBackgroundColor": "#00beff",
 		"backgroundColor": "#ff8e00",
-		"enablePullDownRefresh":true,
+		"enablePullDownRefresh":false,
 		"backgroundTextStyle":"dark",
 		"onReachBottomDistance":50
 		

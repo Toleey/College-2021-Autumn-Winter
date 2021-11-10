@@ -11,6 +11,20 @@
 		},
 		onError:function(){
 			console.log('App Error')
+		},
+		globalData:{
+			//是个对象，可以放很多值
+			text:"123456",//生命了一个叫text的全局变量
+			//典型globalData使用场景，判断用户是否已经登陆
+			//用户点击登录，调用后台验证用户名， 密码无误
+			//将hasLogin修改为true 进行下一步业务
+			//需要登录才能访问的页面，从一判断hasLogin的值
+			//如果为true 正常访问，如果为false，弹出需要登录提示
+			//跳转到登录页面
+			//退出登录时 将hasLogin改为false
+			hasLogin:false
+			
+			
 		}
 	}
 </script>
@@ -86,6 +100,6 @@
 		/* background-color: pink; */
 	}
 	.box{
-		background-color: yellow;
+		/* background-color: yellow; */
 	}
 </style>
