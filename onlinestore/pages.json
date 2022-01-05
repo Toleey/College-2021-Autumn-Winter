@@ -1,0 +1,75 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "布艺软装"
+			}
+		}
+        ,{
+            "path" : "pages/item/item",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				
+				"app-plus":{
+				                    "scrollIndicator":"none",//去除滚动条
+				                    "titleNView":{//导航栏
+				                        "backgroundColor":"#1375FF",//导航栏的背景色
+				                        "searchInput":{//中间的搜索框
+				                            "align":"left",//placeholder对齐方式
+				                            "borderRadius":"30px",
+				                            "placeholder":"请输入关键词搜素",
+				                            "placeholderColor":"#BEBFC2",
+				                            "backgroundColor":"#fff",
+				                            "disabled":true//布尔值，是否输入
+				                        },
+				//重点说明:在iconfont中下载你所需要的图标，解压后把iconfont.ttf字体文件拷贝在static目录下，fontSrc需要引入。
+				                        "buttons":[//配置两边的按钮
+				                            {
+				                                "color":"#fff",
+				                                "float":"left",
+				                                "fontSize":"22px",
+				                                "fontSrc":"/static/font/iconfont.ttf",
+				                                "text":"\ue657"//按钮上显示的文字。使用字体图标时 unicode 字符表示必须 '\u' 开头，如 "\ue123"（注意不能写成"\e123"）。
+				                            },
+				                            {
+				                                "color":"#fff",
+				                                "float":"right",
+				                                "fontSize":"22px",
+				                                "fontSrc":"/static/font/iconfont.ttf",
+				                                "text":"\ue6d8"
+				                            }
+				                        ]
+				                    }
+				                }
+            }
+            
+        }
+        ,{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
+	}
+}

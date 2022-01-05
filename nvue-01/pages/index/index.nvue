@@ -1,0 +1,28 @@
+<template>
+	<div>
+		<div style="height: 1000px; background-color: #007AFF;">
+			<text>111</text> <!-- 文本必须写在text里面 -->
+		</div> <!-- 屏幕高度1200px -->
+		<div style="height: 1000px; background-color: #4CD964;">
+			<text>111</text> <!-- 文本必须写在text里面 -->
+		</div> <!-- 屏幕高度1200px -->
+		
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+
+</style>

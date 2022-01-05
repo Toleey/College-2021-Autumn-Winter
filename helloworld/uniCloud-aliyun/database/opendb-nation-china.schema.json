@@ -1,0 +1,23 @@
+{
+	"bsonType": "object",
+	"required": ["name"],
+	"permission": {
+		"read": true,
+		"create": true,
+		"update": true,
+		"delete": true
+	},
+	"properties": {
+		"_id": {
+			"description": "ID，系统自动生成"
+		},
+		"name": {
+			"bsonType": "string",
+			"description": "民族名称"
+		},
+		"first_letter": {
+			"bsonType": "string",
+			"description": "拼音首字母"
+		}
+	}
+}

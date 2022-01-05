@@ -1,0 +1,47 @@
+<template>
+	<div>
+		
+		<!-- 轮播图 -->
+		<slider class="slider" auto-play="true" interval="3000" show-indicators="true" infinite="true" scrollable="true">
+			
+			<div  v-for="(item,index) in img">
+			  <image class="image w-100" :src="item.img"></image>
+			</div>
+			
+			<indicator class="indicator"></indicator>
+		</slider>
+	</div>
+</template>
+
+<script>
+	export default {
+		name:"carousel",
+		data() {
+			return {
+				
+			};
+		},
+		props:['img'],
+	}
+</script>
+
+<style lang="scss">
+	
+	.slider,.image{
+		width: 750px;
+		height: 400px;
+		// border: 1px solid black;
+		
+	}
+	.indicator{
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		width: 150px;
+		height: 80px;
+		background-color: rgba(0,0,0,0);
+		item-color:rgba(255,255,255,0.5);
+		item-selected-color:#ffffff;
+	}
+
+</style>

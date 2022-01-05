@@ -1,0 +1,37 @@
+{
+	"bsonType": "object",
+	"required": ["title", "text", "author"],
+	"permission": {
+		"properties": {
+			"_id": {
+				"description": "存储文档 ID（文章 ID），系统自动生成"
+			},
+			"title": {
+				"bsonType": "string",
+				"description": "标题"
+			},
+			"text": {
+				"bsonType": "string",
+				"description": "正文"
+			},
+			"author": {
+				"bsonType": "string",
+				"description": "作者"
+			},
+			"translation": {
+				"bsonType": "string",
+				"description": "译文"
+			},
+			"appreciation": {
+				"bsonType": "string",
+				"description": "赏析"
+			},
+			"dynasty":{
+				"bsonType": "string",
+				"description": "朝代"
+			}
+		}
+	},
+	"data": [],
+	"index": []
+}

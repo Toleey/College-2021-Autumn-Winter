@@ -1,0 +1,128 @@
+<template>
+	<div>
+		<div style="width: 750px; height: 75px; margin-bottom: 10px;">
+			<!-- 顶部选项卡 -->
+			<scroller style="width: 750px; height: 75px; display: flex; flex-direction: row " scroll-direction="horizontal" show-scrollbar="false">
+
+				<div v-for="(item,i) in tabBars" :key="i"
+					style="height: 75px; width:120px; justify-content: center; align-items: center; cursor: pointer; "
+					@click="change(i)" :ref="'tab'+i"><!-- ref属性动态计算的 -->
+					
+					<text style="height: 75px; line-height: 75px; font-size: 32px;"
+						:style="{'color':tabIndex===i?'#FD6801':'#000000','border-bottom':tabIndex===i?'5px solid #FD6801':'0px solid #ffffff'}">{{item.name}}</text>
+
+				</div>
+
+			</scroller>
+
+		</div>
+		
+		<!-- 让屏幕滚动，带动选项卡左滚有滚 -->
+		<slider :index="tabIndex" @change="sliderChange">
+			<list  v-for="(item,i) in tabBars" :key="i">
+				<cell style="border: 1px solid black; width: 750px; height: 700px;">
+					<text>{{item.name}}</text>
+				</cell>
+			</list>
+			
+			<!-- <div v-for="(item,i) in tabBars" :key="i" >
+				<text>{{item.name}}</text>
+			</div> list呈现的内容更多 -->
+			
+		</slider>
+
+		
+
+	</div>
+</template>
+
+<script>
+	const dom = weex.requireModule('dom')
+
+	export default {
+		data() {
+			return {
+				tabIndex: 0,
+				tabBars: [{
+					name: '关注',
+					id: 'guanzhu',
+					template: "index"
+				}, {
+					name: '推荐',
+					id: 'tuijian',
+					template: "special"
+				}, {
+					name: '体育',
+					id: 'tiyu',
+					template: "special"
+				}, {
+					name: '热点',
+					id: 'redian',
+					template: "special"
+				}, {
+					name: '财经',
+					id: 'caijing',
+					template: "special"
+				}, {
+					name: '娱乐',
+					id: 'yule',
+					template: "special"
+				}, {
+					name: '军事',
+					id: 'junshi',
+					template: "special"
+				}, {
+					name: '历史',
+					id: 'lishi',
+					template: "special"
+				}, {
+					name: '本地',
+					id: 'bendi',
+					template: "special"
+				}]
+			}
+		},
+		watch:{
+			//监听tableIndex值的变化就可以了
+			tabIndex(newValue,oldValue){
+				this.change(newValue)
+			}
+		},
+		methods: {
+			async change(index) {
+				//改变当前选中
+				this.tabIndex = index
+				//监听滚动区域变化
+				//拿到当前元素 突出显示的元素
+				let el = this.$refs['tab'+index][0]
+				//获取当前元素的信息(节点信息)
+				dom.getComponentRect(el,(res)=>{
+					console.log(res)
+					//元素在屏幕右边时，滚动
+					if(res.size.right>750){
+						//拿到处于中间的节点
+						let n = index - 4
+						let newEl = this.$refs['tab'+index][0]
+						//将节点滚到最左边
+						return dom.scrollToElement(newEl,{})
+					}
+					
+					if(res.size.left<0){
+						return dom.scrollToElement(el,{})
+					}
+					
+				})
+			},
+			sliderChange(e){
+				// console.log(e)
+				this.tabIndex=e.tabIndex
+				this.change(e.index)
+				
+			}
+		}
+	}
+</script>
+
+<style>
+
+</style>

@@ -1,0 +1,28 @@
+<template>
+	<div>
+		<map longitude="">
+			
+		</map>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>
+
+<style>
+	map{
+		width: 750px;
+		height: 750px;
+	}
+
+</style>

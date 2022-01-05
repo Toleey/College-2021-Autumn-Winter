@@ -1,0 +1,1 @@
+<view><button data-event-opts="{{[['tap',[['getLunbo',['$event']]]]]}}" bindtap="__e">发起get请求</button></view>

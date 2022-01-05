@@ -1,0 +1,16 @@
+{
+  "pages": [
+    {
+      "path": "pages/calendar/calendar",
+      "style": {
+        "navigationBarTitleText": "Calendar 日历"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  }
+}

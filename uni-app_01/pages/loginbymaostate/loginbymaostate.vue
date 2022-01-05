@@ -22,8 +22,8 @@
 </template>
 
 <script>
-	// import store from '@/store/index.js'
-	import {mapState,mapMutations} from 'vuex' //倒入辅助函数
+	//import store from '@/store/index.js'
+	import {mapState,mapMutations,mapActions} from 'vuex' //倒入辅助函数
 	export default {
 		data() {
 			return {
@@ -45,7 +45,9 @@
 			//可以在其他方法中使用this.方法名 调用
 			//映射后的方法
 			
+			//对象展开运算符
 			...mapMutations(['login','logout']),//把方法映射到这里，可以直接调用
+			...mapActions(['logoutaction','loginaction']),
 			
 			btnlogin(){
 				//取页面中的用户名和密码，跟服务端做交互，判断是否正确
@@ -57,7 +59,15 @@
 					userinfo.password=this.loginuser.pwd
 					userinfo.headurl="http://xdfsd"
 					// store.commit("login",userinfo)
-					this.login(userinfo)  //把vuex里里面的方法映射到这里
+					// this.login(userinfo)  //把vuex里里面的方法映射到这里
+					
+					//这种方式是调用mutations里面的方法
+					 // store.dispatch('loginaction',userinfo)
+					
+					//以对象属性的方式
+					//store.dispatch({type:'loginaction',uinfo:userinfo})
+					
+					this.loginaction(userinfo)
 				}else{
 					uni.showToast({
 						title:"用户名或密码错误"
@@ -66,15 +76,18 @@
 			},
 			btnlogout(){
 				// store.commit("logout")
-				this.logout()
+				
+				// this.logout()
+				
+				//store.dispatch('logoutaction')
+				
+				this.logoutaction()
 			}
 			
 			
 		},
 		computed:{
 			...mapState(["userinfo","haslogin"]),
-			
-			
 		}
 	}
 </script>

@@ -1,0 +1,277 @@
+<template>
+	<div>
+		<!-- @tabChange是在子组件注册的方法，tabChange是自己的方法两者连接起来 -->
+		<chooseMenu :tabBars="tabBars" :tabIndex="tabIndex" @tabChange="tabChange"></chooseMenu>
+
+		<slider :index="tabIndex" @change="sliderChange">
+			<list v-for="(item,i) in tabBars" :key="i">
+
+				<!-- 下拉刷新  放在div下面不好用-->
+				<refresh style="width: 750px; height: 80px; display: flex; align-items: center;justify-content: center;"
+					:display="refreshShow" @refresh="refresh" @pullingdown="pullingdown">
+					<text style="font-size: 30px; color: #343A40;">{{refreshText}}</text>
+				</refresh>
+
+				<template v-if="tabBars[tabIndex].template=='index'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<carousel :img="swipers"></carousel>
+						<menu :menus="chooseMenuList"></menu>
+						<div class="w-100 line"></div>
+						<promotion :promotions="promotionList"></promotion>
+					</cell>
+				</template>
+
+				<template v-else-if="tabBars[tabIndex].template=='special'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>推荐</text>
+					</cell>
+				</template>
+
+				<template v-else-if="tabBars[tabIndex].template=='sports'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>体育</text>
+					</cell>
+				</template>
+
+				<template v-else-if="tabBars[tabIndex].template=='hotspot'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>热点</text>
+					</cell>
+				</template>
+
+				<template v-else-if="tabBars[tabIndex].template=='finance'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>财经</text>
+					</cell>
+				</template>
+
+				<template v-else-if="tabBars[tabIndex].template=='entertainment'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>娱乐</text>
+					</cell>
+				</template>
+				<template v-else-if="tabBars[tabIndex].template=='military'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>军事</text>
+					</cell>
+				</template>
+				<template v-else-if="tabBars[tabIndex].template=='history'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>历史</text>
+					</cell>
+				</template>
+				<template v-else-if="tabBars[tabIndex].template=='local'">
+					<cell style=" width: 750px; min-height: 700px;">
+						<text>当地</text>
+					</cell>
+				</template>
+
+				<loading :display="loadingShow" @loading="onloading">
+					<text style="font-size: 30px; color: #F0AD4E; "></text>
+				</loading>
+
+			</list>
+		</slider>
+
+
+
+
+	</div>
+</template>
+
+<script>
+	import carousel from '../../components/carousel/carousel.nvue'
+	import menu from '../../components/menu/menu.nvue'
+	import promotion from '../../components/promotion/promotion.nvue'
+	import chooseMenu from '../../components/chooseMenu/chooseMenu.nvue'
+
+	export default {
+		data: {
+			swipers: [{
+					img: "../../static/images/demo/cate_01.png"
+				},
+				{
+					img: "../../static/images/demo/cate_02.png"
+				},
+				{
+					img: "../../static/images/demo/cate_03.png"
+				},
+			],
+			chooseMenuList: [{
+					img: "../../static/indexnav/1.png",
+					title: "新品发布"
+				},
+				{
+					img: "../../static/indexnav/2.gif",
+					title: "商品众筹"
+				},
+				{
+					img: "../../static/indexnav/3.gif",
+					title: "以旧换新"
+				},
+				{
+					img: "../../static/indexnav/4.gif",
+					title: "一分团购"
+				},
+				{
+					img: "../../static/indexnav/5.gif",
+					title: "超值特卖"
+				},
+				{
+					img: "../../static/indexnav/6.gif",
+					title: "商城秒杀"
+				},
+				{
+					img: "../../static/indexnav/7.gif",
+					title: "真心想要"
+				},
+				{
+					img: "../../static/indexnav/8.gif",
+					title: "电视特卖"
+				},
+				{
+					img: "../../static/indexnav/9.gif",
+					title: "加点热卖"
+				},
+				{
+					img: "../../static/indexnav/10.gif",
+					title: "其他选项"
+				},
+			],
+			promotionList: [{
+				leftImg: "../../static/images/demo/demo1.jpg",
+				rightUpImg: "../../static/images/demo/demo2.jpg",
+				rightDownImg: "../../static/images/demo/demo3.jpg",
+			}, ],
+			sortList: [{
+					name: "推荐"
+				},
+				{
+					name: "手机"
+				},
+				{
+					name: "智能"
+				},
+				{
+					name: "电视"
+				},
+				{
+					name: "笔记本"
+				},
+				{
+					name: "家电"
+				},
+			],
+			tabIndex: 0,
+			tabBars: [{
+				name: '关注',
+				id: 'guanzhu',
+				template: "index"
+			}, {
+				name: '推荐',
+				id: 'tuijian',
+				template: "special"
+			}, {
+				name: '体育',
+				id: 'tiyu',
+				template: "sports"
+			}, {
+				name: '热点',
+				id: 'redian',
+				template: "hotspot"
+			}, {
+				name: '财经',
+				id: 'caijing',
+				template: "finance"
+			}, {
+				name: '娱乐',
+				id: 'yule',
+				template: "entertainment"
+			}, {
+				name: '军事',
+				id: 'junshi',
+				template: "military"
+			}, {
+				name: '历史',
+				id: 'lishi',
+				template: "history"
+			}, {
+				name: '本地',
+				id: 'bendi',
+				template: "local"
+			}],
+			refreshShow: 'hide',
+			refreshText: "下拉可以刷新",
+			loadingShow: 'hide',
+		},
+		onNavigationBarSearchInputClicked() { //能同级写说明是声明周期函数
+			console.log("点击了搜索框，要跳转到搜索页面")
+		},
+		onNavigationBarButtonTap(e) { //注册导航栏button的点击事件
+			// console.log(e)
+			if (e.index == 0) {
+				// if(e.float=="left"){
+				console.log("点击了左侧按钮")
+			} else {
+				console.log("点击了右侧按钮")
+				console.log("执行扫一扫功能")
+				uni.scanCode({
+					success: (e) => {
+						console.log(e)
+					}
+				})
+			}
+		},
+		methods: {
+			tabChange(index) { //接受字组件传过来的数据
+				this.tabIndex = index
+			},
+			sliderChange(e) {
+				this.tabIndex = e.index
+			},
+			refresh(e) {
+				this.refreshShow = 'show'
+				this.refreshText = "正在刷新..."
+
+				setTimeout(() => {
+					//从服务器端获取数据
+					//依据id向后台获取数据,
+					let id = this.tabBars[this.tabIndex].id;
+
+					this.refreshShow = 'hide'
+					this.refreshText = "下拉可以刷新"
+				}, 1200)
+
+			},
+			pullingdown(e) {
+				this.refreshText = e.pullingDistance > e.viewHeight ? '释放就可以刷新' : '下拉可以刷新'
+			},
+			onloading(e) { //上拉完成式出发
+				console.log("hello")
+				this.loadingShow = 'show'
+
+				setTimeout(() => {
+					//从服务器端获取数据
+					//依据id向后台获取数据
+					let id = this.tabBars[this.tabIndex].id;
+
+					//这次要回来的商品数据 要追加到后面原来的数据里
+					this.loadingShow = 'hide'
+				}, 2000)
+
+			}
+		},
+		components: {
+			carousel,
+			menu,
+			promotion,
+			chooseMenu
+		}
+	}
+</script>
+
+<style lang="scss">
+	.line {
+		border: 10px solid #F2F2F2;
+	}
+</style>

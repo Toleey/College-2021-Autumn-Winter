@@ -1,0 +1,58 @@
+<template>
+	<div class="box">
+		<div class="box-div a-center" @click="sendNum(num)">
+			<text>{{num}}</text>
+			<text>购物车数量：{{getCartNum}}</text>
+		</div>
+		
+	</div>
+</template>
+
+<script>
+	import store from '@/store/index.js'//必须叫index.js
+	import {mapState,mapMutations,mapGetters} from 'vuex'
+	
+	export default {
+		data() {
+			return {
+			}
+		},
+		data:{
+			num:111
+		},
+		created() {
+			console.log("nvue主页注册事件msg")
+			uni.$on('msg',e=>{
+				console.log("nvue页面接受到的数据："+e)
+			})
+		},
+		methods: {
+			sendNum(num){
+				console.log(num)
+				let obj={data:num}
+				uni.$emit('index',obj)
+				getApp().globalData.text="123456"
+			}
+		},
+		computed:{
+			...mapState({
+				itemList:state=>state.cart.list
+			}),
+			...mapGetters(['getCartNum'])
+		}
+	}
+</script>
+
+<style src="@/common/zcm-main.css"></style>
+<style>
+	.box{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.box-div{
+		height: 100px;
+		background-color: #007AFF;
+		border: 1px solid black;
+		width: 375px;
+	}
+</style>

@@ -1,0 +1,83 @@
+<template>
+	<view>
+		
+		<div class="promotion" v-for="p in promotions">
+			<div class="promotion-left">
+				<image class="promotion-left-image" :src="p.leftImg"></image>
+			</div>
+			<div class="promotion-right">
+				<div class="promotion-right-up">
+					<image class="promotion-right-up-image" :src="p.rightUpImg"></image>
+				</div>
+				<div class="promotion-right-down">
+					<image class="promotion-right-down-image" :src="p.rightDownImg"></image>
+				</div>
+			</div>
+		</div>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		name:'promotion',
+		data() {
+			return {
+				
+			};
+		},
+		props:['promotions']
+	}
+</script>
+
+<style lang="scss">
+	
+	.promotion {
+		height: 700px;
+		width: 750px;
+		display: flex;
+		flex-direction: row;
+	
+		.promotion-left {
+			height: 750px;
+			width: 375px;
+	
+			.promotion-left-image {
+				height: 750px;
+				width: 375px;
+			}
+	
+		}
+	
+		.promotion-right {
+			border-left: 1px solid white;
+			height: 750px;
+			width: 375px;
+			display: flex;
+			flex-direction: column;
+	
+			.promotion-right-up {
+				height: 375px;
+				width: 375px;
+	
+				.promotion-right-up-image {
+					height: 375px;
+					width: 375px;
+				}
+	
+			}
+	
+			.promotion-right-down {
+				border-top: 1px solid white;
+				height: 375px;
+				width: 375px;
+	
+				.promotion-right-down-image {
+					height: 375px;
+					width: 375px;
+				}
+			}
+		}
+	}
+
+</style>

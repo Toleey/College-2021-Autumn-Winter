@@ -41,18 +41,15 @@
                 ]
             },
             /* ios打包配置 */
-            "ios" : {},
+            "ios" : {
+                "idfa" : true
+            },
             /* SDK配置 */
             "sdkConfigs" : {
-                "ad" : {
-                    "gdt" : {},
-                    "csj" : {},
-                    "360" : {},
-                    "ks" : {},
-                    "ks-content" : {}
-                }
+                "ad" : {}
             }
-        }
+        },
+        "nvueCompiler" : "uni-app"
     },
     /* 快应用特有相关 */
     "quickapp" : {},
@@ -76,5 +73,14 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "SXABZ-KOOWD-TYY4O-HCR4Y-THVG3-IRFWF"
+                }
+            }
+        }
+    }
 }

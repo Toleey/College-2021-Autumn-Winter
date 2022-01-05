@@ -1,0 +1,33 @@
+<template>
+	<div>
+	
+		<carousel :img="swipers"></carousel>
+		
+	</div>
+</template>
+
+<script>
+	import carousel from '../../components/carousel/carousel.nvue' 
+	export default {
+		data() {
+			return {
+				swipers:[
+					{img:"../../static/images/demo/cate_04.png"},
+					{img:"../../static/images/demo/cate_04.png"},
+					{img:"../../static/images/demo/cate_04.png"},
+				]
+			};
+		},
+		components:{
+			carousel
+		}
+		
+	}
+</script>
+
+<style lang="scss">
+	
+	
+	
+	
+</style>

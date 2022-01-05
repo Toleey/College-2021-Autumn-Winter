@@ -1,0 +1,55 @@
+<template>
+  <list>
+	  <refresh style="height: 80px; text-align: center;" @refresh="refresh" @pullingdown="pullingdown" :display="show">
+		  <text>{{refreshtext}}</text>
+	  </refresh>
+	  
+    <cell v-for="num in lists">
+		<div style="height: 300px; border: 1px solid black; margin: 50px; background-color: orange">
+			<text>{{num}}</text>
+		</div>
+    </cell>
+	
+	<header>
+		<div style="height: 150px; background-color: orange;">我是header组件</div>
+	</header>
+	
+	<cell v-for="num in lists">
+		<div style="height: 300px; border: 1px solid black; margin: 50px; background-color: orange">
+			<text>{{num}}</text>
+		</div>
+	</cell>
+	
+  </list>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+		refreshtext:"下拉可以刷新",
+        lists: ['A', 'B', 'C', 'D', 'E'],
+		show:'hide'
+      }
+    },
+	methods:{
+		refresh(){
+			this.show='show'
+			//这里写执行数据加载的代码
+			this.refreshtext="正在刷新……"
+			setTimeout(()=>{
+				this.show='hide'
+				this.refreshtext="下拉可以刷新"
+			},3000)
+		},
+		pullingdown(e){
+			if(e.pullingDistance>e.viewHeight){
+				this.refreshtext="释放就可以刷新了"
+			}else{
+				this.refreshtext="下拉可以刷新"
+			}
+		}
+		
+	}
+  }
+</script>

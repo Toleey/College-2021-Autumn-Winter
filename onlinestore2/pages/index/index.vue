@@ -1,4 +1,4 @@
-‘<template>
+<template>
 	<view class="content">
 		
 		
@@ -60,8 +60,10 @@
 				</view>
 			</view> -->
 			
+			
 		</view>
 		
+		<view class="isover" v-if="flag">—————————我是有底线的!—————————</view>
 	</view>
 </template>
 
@@ -72,12 +74,31 @@
 		data() {
 			return {
 				imageList:[],
-				itemList:[]
+				itemList:[],
+				pageIndex:1,
+				flag:false //声明变量
 			}
 		},
 		onLoad() {
 			this.getLunbo2()
-			this.getItem2()
+			//this.getItem2()
+			this.getItem3()
+		},
+		onReachBottom() {
+			this.pageIndex++
+			this.getItem3()
+			console.log(this.pageIndex)
+		},
+		onPullDownRefresh() {
+			console.log("下拉刷新")
+			this.getLunbo2()
+			this.pageIndex=1
+			this.itemList=[]
+			this.flag=false
+			// this.getItem3() 停一秒看看
+			setTimeout(()=>{this.getItem3()},1000)
+			uni.stopPullDownRefresh()
+			
 		},
 		methods: {
 			
@@ -106,7 +127,23 @@
 					})
 				}
 			},
-			
+			async getItem3(){
+				const res = await this.$myItem({
+					url:'/api/getgoods?pageindex='+this.pageIndex
+				})
+				if(res.data.status==0){
+					// this.itemList = res.data.message
+					this.itemList = [...this.itemList,...res.data.message]
+					console.log(this.itemList)
+					if(res.data.message.length<10){
+						this.flag=true
+					}
+				}else{
+					uni.showToast({
+						title:"请求有误"
+					})
+				}
+			},
 			
 			getLunbo(){
 				uni.request({
@@ -125,8 +162,9 @@
 				})
 			},
 			getItem(){
+				
 				uni.request({
-					url:"http://localhost:8082/api/getgoods?pageindex=1",
+					url:"http://localhost:8082/api/getgoods?pageindex="+this.pageIndex,
 					method:"GET",
 					data:{},
 					success: (res) => {
@@ -138,9 +176,11 @@
 					},
 					complete: () => {
 						console.log("getItem()方法执行了")
-					}
+					},
+					
 				})
 			},
+			
 			toDetail(id){
 				console.log(id)
 				uni.navigateTo({
@@ -166,6 +206,17 @@
 	.content{
 		background-color: #EAEAEA;
 		font-family: 'Microsoft Yahei';
+		
+		.isover{
+			margin-top: 20rpx;
+			width: 100%; //页面上下布局用px
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			font-size: 28rpx;
+			background-color: #F0AD4E;
+		}
+		
 	}
 	
 	// .header_box{

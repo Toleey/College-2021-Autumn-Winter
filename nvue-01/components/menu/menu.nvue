@@ -1,0 +1,64 @@
+<template>
+	<div>
+		
+		<div class="chooseMenu">
+			
+			<div class="chooseMenuBox w-100" v-for="m in menus">
+				<image class="menuIcon"  :src="m.img"></image>
+				<text class="menuTitle">{{m.title}}</text>
+			</div>
+			
+		</div>
+		
+	</div>
+</template>
+
+<script>
+	export default {
+		name:'menu',
+		data() {
+			return {
+				
+			};
+		},
+		props:['menus']
+	}
+</script>
+
+<style lang="scss">
+	
+	.chooseMenu{
+		margin: 20px auto;
+		// border: 1px solid black;
+		height: 300px;
+		// width: 750px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		
+		.chooseMenuBox{
+			// border: 1px solid black;
+			width: 149px;
+			height: 149px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			.menuIcon{
+				// border: 1px solid black;
+				width: 80px;
+				height: 80px;
+			}
+			
+			.menuTitle{
+				margin-top: 10px;
+				font-size: 25px;
+				font-weight: bold;
+			}
+			
+			
+		}
+		
+	}
+
+</style>

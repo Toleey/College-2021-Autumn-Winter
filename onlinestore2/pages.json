@@ -4,9 +4,10 @@
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "网上商城",
-				"enablePullDownRefresh": false,
+				"enablePullDownRefresh": true,
 				"navigationBarBackgroundColor":"#A30007",
-				"navigationBarTextStyle":"white"
+				"navigationBarTextStyle":"white",
+				"onReachBottomDistance":100
 			}
 		}
 	    ,{
